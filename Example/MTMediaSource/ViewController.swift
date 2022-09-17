@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import MTMediaSource
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        MTBasic.isLogEnabled = true
+        MTLog("let's start!")
     }
 
     override func didReceiveMemoryWarning() {

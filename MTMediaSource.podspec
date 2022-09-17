@@ -17,18 +17,16 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = "MT Tech Media Source Handlers"
 
-  s.homepage         = 'https://github.com/Hippie Fox/MTMediaSource'
+  s.homepage         = 'https://github.com/hippiefox/MTMediaSource'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Hippie Fox' => 'foxhippie5@gmail.com' }
-  s.source           = { :git => 'https://github.com/Hippie Fox/MTMediaSource.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/hippiefox/MTMediaSource.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '12.0'
 
   s.source_files = 'MTMediaSource/Classes/**/*'
   

@@ -1,0 +1,6 @@
+framework module MTMediaSource {
+  umbrella header "MTMediaSource-umbrella.h"
+
+  export *
+  module * { export * }
+}

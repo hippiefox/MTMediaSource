@@ -1,0 +1,16 @@
+PODS:
+  - MTMediaSource (0.1.0)
+
+DEPENDENCIES:
+  - MTMediaSource (from `../`)
+
+EXTERNAL SOURCES:
+  MTMediaSource:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MTMediaSource: 9d6846f620702641cabb56439513f65c1b98f190
+
+PODFILE CHECKSUM: 3f76857990a9bb3f4795c9e98c51ff616e4bf939
+
+COCOAPODS: 1.11.3
