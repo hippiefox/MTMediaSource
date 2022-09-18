@@ -1,15 +1,26 @@
 PODS:
-  - MTMediaSource (0.1.0)
+  - Kingfisher (6.3.1)
+  - MTMediaSource (0.1.0):
+    - Kingfisher
+    - SnapKit
+  - SnapKit (5.6.0)
 
 DEPENDENCIES:
   - MTMediaSource (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+    - SnapKit
 
 EXTERNAL SOURCES:
   MTMediaSource:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MTMediaSource: 9d6846f620702641cabb56439513f65c1b98f190
+  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  MTMediaSource: 5dfe10710d602945ee4081058a0df141c146b2c7
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
 PODFILE CHECKSUM: 3f76857990a9bb3f4795c9e98c51ff616e4bf939
 
