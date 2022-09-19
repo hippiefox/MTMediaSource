@@ -10,6 +10,9 @@
 #endif
 #endif
 
+#import "NSData+WCS.h"
+#import "WCSGTMDefines.h"
+#import "WCSGTMStringEncoding.h"
 
 FOUNDATION_EXPORT double MTMediaSourceVersionNumber;
 FOUNDATION_EXPORT const unsigned char MTMediaSourceVersionString[];
