@@ -19,6 +19,9 @@ open class MTFkBufferModel{
     /// 豪秒数
     public var trial_duration: Int = 0
     
+    public var bufferTag: String = ""
+    public var dragTag: String = ""
+    
     public var state_isBufferable = false
     public var state_isLimitDragable = false
 }
