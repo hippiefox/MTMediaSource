@@ -24,6 +24,8 @@ open class MTFkBufferModel{
     
     public var state_isBufferable = false
     public var state_isLimitDragable = false
+    
+    public init(){}
 }
 
 
@@ -51,8 +53,9 @@ open class MTPlayerBufferControl{
     public var totalTrySeconds = 0
     public var tryLeftSeconds = 0
     public var isTrying: Bool = false
-    
     public var maxSlideLimit: Int = 0
+    
+    public init(){}
 }
 
 

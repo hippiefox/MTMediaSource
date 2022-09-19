@@ -15,6 +15,7 @@ public class MTPlayerPreviewItem{
     public var fileId: String!
     public var fileUrl: String!
     public var headerStr: String?
+    public var pureHeaderStr: String?
     public var isEncryted: Bool = false
     public var loadingTips: [String] = []
     public var bufferModel: MTFkBufferModel?
@@ -22,4 +23,8 @@ public class MTPlayerPreviewItem{
     public var fileetag: String?
     public var fileidx: String?
     public var isLocalPath: Bool = false
+    
+    public init(){
+        
+    }
 }

@@ -12,7 +12,6 @@ public extension MTFBPlayerControls{
         case slideLimit(Float)
         case fkBufferPeriodEnd
         case tryingEnd
-
     }
 }
 
