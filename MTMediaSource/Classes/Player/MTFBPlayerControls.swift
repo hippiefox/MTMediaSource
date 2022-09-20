@@ -26,6 +26,9 @@ open class MTFBPlayerControls: MTPlayerControls{
         didSet{
             if isReadyForPlaying{
                 tryFkBuffer()
+                if bufferControl.isTrying{
+                    updateTryUI()
+                }
             }
         }
     }
@@ -62,7 +65,8 @@ open class MTFBPlayerControls: MTPlayerControls{
     open override func slide(to value: Float) {
         if bufferControl.maxSlideLimit > 0,
            value > Float(bufferControl.maxSlideLimit),
-           isAccessAllRights == false{
+           isAccessAllRights == false
+        {
             otherOptionBlock?(.slideLimit(value))
         }else{
             optionBlock?(.slide(value))
@@ -158,6 +162,7 @@ extension MTFBPlayerControls{
             hideBufferLoading()
             otherOptionBlock?(.fkBufferPeriodEnd)
             togglePlayContol(isEnabled: true)
+
             return
         }
         showBufferLoading()
@@ -189,12 +194,12 @@ extension MTFBPlayerControls{
     }
     
     public func updateTryUI(){
-        tryingTipsLabel.text = (MTPlayerConfig.tryingTips ?? "") + "(\(bufferControl.tryLeftSeconds)s"
+        tryingTipsLabel.text = (MTPlayerConfig.tryingTips ?? "") + "\(bufferControl.tryLeftSeconds)s"
         bufferControl.tryLeftSeconds -= 1
-        if bufferControl.tryLeftSeconds < 0{
-            bufferControl.isTrying = false
+        if bufferControl.tryLeftSeconds <= 0{
             isAccessAllRights = false
             otherOptionBlock?(.tryingEnd)
+            bufferControl.resetTry()
             tryingTipsLabel.text = MTPlayerConfig.tryingEndTips
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 self.tryingTipsLabel.removeFromSuperview()

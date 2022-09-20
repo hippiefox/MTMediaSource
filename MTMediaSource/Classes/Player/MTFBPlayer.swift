@@ -16,7 +16,7 @@ open class MTFBPlayer: MTPlayer {
         return control
     }()
 
-    private func handleOther(opt: MTFBPlayerControls.OtherOption) {
+    public func handleOther(opt: MTFBPlayerControls.OtherOption) {
         switch opt {
         case let .slideLimit(time):
             slideLimit(to: time)

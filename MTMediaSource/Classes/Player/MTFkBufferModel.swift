@@ -38,7 +38,7 @@ open class MTPlayerBufferControl{
     /// 是否需要Buffer
     public var isBufferEnabled = false
     
-    func reset(with bufferModel: MTFkBufferModel?){
+    public func reset(with bufferModel: MTFkBufferModel?){
         isBuffering = false
         bufferedTime = 0
         playedDuration = 0
@@ -54,6 +54,11 @@ open class MTPlayerBufferControl{
     public var tryLeftSeconds = 0
     public var isTrying: Bool = false
     public var maxSlideLimit: Int = 0
+    
+    public func resetTry(){
+        self.tryLeftSeconds = totalTrySeconds
+        isTrying = false
+    }
     
     public init(){}
 }
